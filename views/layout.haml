@@ -1,0 +1,33 @@
+!!!
+%html{:lang => "en-au"}
+  %head
+    %meta{:charset => "UTF-8"}
+    
+    /[if IE]
+      %script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
+
+    %title= (@title != "Killerdumptrucks" ? "#{@title} at Killerdumptrucks" : "Killer Dumptrucks presents: Killer Dumptrucks")
+    
+    %link{:href => versioned_stylesheet("reset"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    
+    %link{:href => versioned_stylesheet("main"), :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+
+    -# %link{:rel => "icon", :href => versioned_favicon, :type => "image/x-icon"}
+        
+    %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Killer Dumptrucks: The Feed", :href => "/feed"}
+
+  %body{:id => "killerdumptrucks-com", :class => (@layout ? @layout : (@category == "*" ? "tags" : @category))}
+    #wrapper
+      %header.layout
+        %h1
+          = home_link("Killer Dumptrucks")
+          is forgotten pop culture moments
+        = nav_builder
+      #page
+        = yield
+
+    / jQuery 
+    %script{:src => versioned_javascript("jquery-1.3.2.min")}
+
+    / Run site scripts
+    %script{:src => versioned_javascript("go")}

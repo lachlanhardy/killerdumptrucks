@@ -1,0 +1,26 @@
+Tasks to be done before launch, in priority order:
+
+ - favicon
+ - build site
+ - deploy site
+ - QA site
+
+Others things to do, in priority order:
+
+ - Add visible Feed button
+ - iPhone version
+ - Get my Smoke on
+ - update Sinatra, Rack etc
+ - Generic mobile site
+ - add google sitemap
+ - CI
+ - Pass YSlow/Page Speed
+ - encode tags
+ - make tags case-insensitive
+ - set up weighted tagging
+ - Set up post-commit hook action for redeploy
+ - Make error page cooler
+ - Set up commenting
+ - Add <rights> etc to feeds
+ - feeds should not contain OBJECT, SCRIPT, inline styles etc
+

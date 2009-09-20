@@ -1,0 +1,10 @@
+%nav
+  %ul
+    - @nav_items.each do |item|
+      %li
+        - if item == request.env['PATH_INFO'].split("/").last
+          %span= item
+        - else
+          %a{:href => "/#{item}/"}= item
+        
+        
