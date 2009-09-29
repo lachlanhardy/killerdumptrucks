@@ -16,7 +16,7 @@
         
     %link{ :rel => "alternate", :type => "application/atom+xml", :title => "Killer Dumptrucks: The Feed", :href => "/feed"}
 
-  %body{:id => "killerdumptrucks-com", :class => (@layout ? @layout : (@category == "*" ? "tags" : @category))}
+  %body{:id => "killerdumptrucks-com", :class => @body_class}
     #wrapper
       %header.layout
         %h1
