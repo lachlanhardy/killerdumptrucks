@@ -1,6 +1,5 @@
 Tasks to be done before launch, in priority order:
 
- - favicon
  - build site
    - add random feature
    - add browse page
