@@ -2,7 +2,9 @@ Tasks to be done before launch, in priority order:
 
  - favicon
  - build site
- - deploy site
+   - add random feature
+   - add browse page
+   - write about description
  - QA site
 
 Others things to do, in priority order:
