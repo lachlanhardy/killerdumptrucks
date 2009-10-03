@@ -4,6 +4,7 @@ Tasks to be done before launch, in priority order:
    - add random feature
    - add browse page
    - write about description
+   - add feed
  - QA site
 
 Others things to do, in priority order:

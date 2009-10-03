@@ -34,6 +34,7 @@ module Killerdumptrucks
     
     # homepage
     get '/' do
+      # this should just redirect to latest design? (is that a usability fuck?)
       haml :index
     end
     
