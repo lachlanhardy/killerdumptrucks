@@ -125,9 +125,9 @@ html.js {}
 /* =Designs */
 
   /* =AOTKD */
-  body.aotkd {background: #dfc5a2 url(images/designs/aotkd/bg-body.jpg) repeat-x 0 0; color: #5e2801;}
+  body.aotkd {background: #e2c79c url(images/designs/aotkd/bg-body.jpg) repeat-x 0 0; color: #5e2801;}
     
-    body.aotkd #page {background: url(images/designs/aotkd/truck-export-take2.png) no-repeat 100% 0; font-size: 1.2em; margin: 0 auto; overflow: auto; width: 85em;}
+    body.aotkd #page {background: url(images/designs/aotkd/bg-page.png) no-repeat 100% 0; font-size: 1.2em; margin: 0 auto; overflow: auto; width: 85em;}
     
       body.aotkd h1 {text-indent: -999em;}
       body.aotkd h2,
