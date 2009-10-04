@@ -136,14 +136,14 @@ html.js {}
     
       body.aotkd #main {float: left; margin: 2em 0 0 0; width: 35em;}
       
-        body.aotkd div.story {margin: 0 0 6em 0;}
+        body.aotkd div.story {margin: 0 0 3em 0;}
           body.aotkd div.story p {font: 1.334em/1.5 Georgia, 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', serif;}
 
         body.aotkd dl {margin: 0 0 2em 0;}
           body.aotkd dt {margin: 0 0 0.5em 0;}
           body.aotkd dd {margin: 0 0 0.5em 4em;}
       
-      body.aotkd #merch {float: right; margin: 25em 0 0 0; width: 46em;}
+      body.aotkd #merch {float: right; margin: 22em 0 0 0; width: 46em;}
         body.aotkd #merch h2,
         body.aotkd #merch h3 {font-size: 1.083em;}
         body.aotkd #merch h2 {border-top: 3px solid #5e2801; border-bottom: 1px solid #5e2801; margin: 0 0 1em 0; padding: 0.3em 0;}
