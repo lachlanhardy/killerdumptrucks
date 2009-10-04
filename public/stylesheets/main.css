@@ -129,11 +129,12 @@ html.js {}
     
     body.aotkd #page {background: url(images/designs/aotkd/bg-page.png) no-repeat 100% 0; font-size: 1.2em; margin: 0 auto; overflow: auto; width: 85em;}
     
-      body.aotkd h1 {text-indent: -999em;}
+      body.aotkd h1 {background: url(images/designs/aotkd/bg-h1.png) no-repeat 0 0; height: 248px; left: -0.6em; position: relative; text-indent: -999em; width: 544px;}
+      
       body.aotkd h2,
       body.aotkd h3 {font-size: 1em; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;}
     
-      body.aotkd #main {float: left; margin: 20em 0 0 0; width: 35em;}
+      body.aotkd #main {float: left; margin: 2em 0 0 0; width: 35em;}
       
         body.aotkd div.story {margin: 0 0 6em 0;}
           body.aotkd div.story p {font: 1.334em/1.5 Georgia, 'Clarendon Std', 'Century Old Style Std', 'Century Schoolbook', serif;}
@@ -142,7 +143,7 @@ html.js {}
           body.aotkd dt {margin: 0 0 0.5em 0;}
           body.aotkd dd {margin: 0 0 0.5em 4em;}
       
-      body.aotkd #merch {float: right; margin: 40em 0 0 0; width: 46em;}
+      body.aotkd #merch {float: right; margin: 25em 0 0 0; width: 46em;}
         body.aotkd #merch h2,
         body.aotkd #merch h3 {font-size: 1.083em;}
         body.aotkd #merch h2 {border-top: 3px solid #5e2801; border-bottom: 1px solid #5e2801; margin: 0 0 1em 0; padding: 0.3em 0;}
@@ -150,11 +151,5 @@ html.js {}
         body.aotkd #merch div {float: left; margin: 2em 0 0 0; width: 22em;}
         body.aotkd #merch #poster {float: right;}
           body.aotkd #merch div.display {height: 21.9em; width: 22em;}
-          
 
-        
-        
-        
-        
-      
       
