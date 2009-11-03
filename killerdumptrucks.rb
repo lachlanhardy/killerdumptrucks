@@ -51,7 +51,7 @@ module Killerdumptrucks
     
     get '/random/' do 
       @items = Metadata.all
-      @design = @items[0].path.split(".")[0].split("/")[-1]
+      @design = @items[rand(Metadata.all.length)].path.split(".")[0].split("/")[-1]
       redirect "/#{@design}/", 301 # find correct HTTP response code
     end
     
