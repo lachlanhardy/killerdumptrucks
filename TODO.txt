@@ -1,7 +1,6 @@
 Tasks to be done before launch, in priority order:
 
  - build site
-   - find correct HTTP response code for redirects
    - finish random feature
      - exclude current page from random selection
      - random doesn't appear to work in production??

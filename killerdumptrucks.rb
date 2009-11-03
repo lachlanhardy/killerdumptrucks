@@ -36,7 +36,7 @@ module Killerdumptrucks
     get '/' do
       @items = Metadata.all.sort_by {|item| item.published}.reverse
       @design = @items[0].path.split(".")[0].split("/")[-1]
-      redirect "/#{@design}/", 301 # find correct HTTP response code
+      redirect "/#{@design}/", 302
     end
     
     get '/feed/' do 
@@ -52,8 +52,7 @@ module Killerdumptrucks
     get '/random/' do 
       @items = Metadata.all
       @design = @items[rand(Metadata.all.length)].path.split(".")[0].split("/")[-1]
-      redirect "/#{@design}/", 301 # find correct HTTP response code
-    end
+      redirect "/#{@design}/", 302
     
     get '/browse/' do 
       @items = Metadata.all.sort_by {|item| item.published}.reverse
