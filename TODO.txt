@@ -1,6 +1,7 @@
 Tasks to be done before launch, in priority order:
 
  - build site
+   - find correct HTTP response code for redirects
    - add random feature
    - add browse page
    - write about description

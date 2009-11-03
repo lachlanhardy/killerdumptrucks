@@ -8,7 +8,7 @@ class Metadata
     self.files.collect {|f| new(f, File.read(f))}
   end
   def self.files
-    Dir.glob(File.expand_path("views/*/*/index.haml"))
+    Dir.glob(File.expand_path("views/designs/*"))
   end
   def self.path=(path)
     @path = path
@@ -64,12 +64,12 @@ class Metadata
   def path_without_extension
     self.path.sub(".haml", "")
   end
-  def self.type(type)
-    Class.new(self).class_eval <<-CODE
-      def self.files
-        Dir.glob(File.expand_path("views/#{type}/*/index.haml"))
-      end
-      self
-    CODE
-  end
+  # def self.type(type)
+  #   Class.new(self).class_eval <<-CODE
+  #     def self.files
+  #       Dir.glob(File.expand_path("views/#{type}/*/index.haml"))
+  #     end
+  #     self
+  #   CODE
+  # end
 end

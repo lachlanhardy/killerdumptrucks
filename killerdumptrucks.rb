@@ -35,7 +35,12 @@ module Killerdumptrucks
     # homepage
     get '/' do
       # this should just redirect to latest design? (is that a usability fuck?)
-      haml :index
+      @items = Metadata.all.sort_by {|item| item.published}.reverse
+      @design = @items[0].path.split(".")[0].split("/")[-1]
+      
+      redirect "/#{@design}/", 301 # find correct HTTP response code
+      
+      # haml File.join("/designs/", @design).to_sym
     end
     
     get '/feed/' do 
