@@ -2,6 +2,7 @@ Tasks to be done before launch, in priority order:
 
  - build site
    - find correct HTTP response code for redirects
+   - find out about random in Ruby
    - add random feature
    - add browse page
    - write about description
