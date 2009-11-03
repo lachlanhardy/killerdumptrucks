@@ -8,7 +8,7 @@ class Metadata
     self.files.collect {|f| new(f, File.read(f))}
   end
   def self.files
-    Dir.glob(File.expand_path("views/designs/*"))
+    Dir.glob(File.expand_path("views/designs/*.haml"))
   end
   def self.path=(path)
     @path = path
@@ -40,8 +40,8 @@ class Metadata
   def title
     template_variable("title")
   end
-  def blurb
-    template_variable("blurb")
+  def image
+    template_variable("image")
   end
   def published
     @published ||= self.class.parse_date(template_variable("published"))

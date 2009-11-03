@@ -52,14 +52,17 @@ module Killerdumptrucks
     get '/random/' do 
       @items = Metadata.all
       @design = @items[0].path.split(".")[0].split("/")[-1]
-      
-      pp @items
       redirect "/#{@design}/", 301 # find correct HTTP response code
+    end
+    
+    get '/browse/' do 
+      @items = Metadata.all.sort_by {|item| item.published}.reverse
+      @design = @items[0].path.split(".")[0].split("/")[-1]
+      haml :browse
     end
 
     get '/:name/' do 
       @design = params[:name]
-      pp @design
       haml File.join("/designs/", @design).to_sym
     end
   end
