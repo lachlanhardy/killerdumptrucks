@@ -1,5 +1,5 @@
 class Metadata
-  # I cargo culted this class from Tim Lucas's work on his own blog.
+  # I cargo culted this class from Tim Lucas's work on his blog.
   # I've modified it a bit, but I still don't understand all of it.
   # You can find the original here:
   # http://github.com/toolmantim/toolmantim/blob/f479d008806ca2ae8f0028543c8f693b69bcc329/lib/article.rb
@@ -64,12 +64,4 @@ class Metadata
   def path_without_extension
     self.path.sub(".haml", "")
   end
-  # def self.type(type)
-  #   Class.new(self).class_eval <<-CODE
-  #     def self.files
-  #       Dir.glob(File.expand_path("views/#{type}/*/index.haml"))
-  #     end
-  #     self
-  #   CODE
-  # end
 end

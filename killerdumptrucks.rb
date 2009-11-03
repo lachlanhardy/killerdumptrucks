@@ -34,23 +34,27 @@ module Killerdumptrucks
     
     # homepage
     get '/' do
-      # this should just redirect to latest design? (is that a usability fuck?)
       @items = Metadata.all.sort_by {|item| item.published}.reverse
       @design = @items[0].path.split(".")[0].split("/")[-1]
-      
       redirect "/#{@design}/", 301 # find correct HTTP response code
-      
-      # haml File.join("/designs/", @design).to_sym
     end
     
     get '/feed/' do 
-      @items = Metadata.type(@category.to_sym).all.sort_by {|item| item.published}.reverse
+      @items = Metadata.all.sort_by {|item| item.published}.reverse
       content_type 'application/atom+xml', :charset => 'utf-8'
       haml :feeds, {:format => :xhtml, :layout => false}
     end
     
     get '/about/' do 
       haml :about
+    end
+    
+    get '/random/' do 
+      @items = Metadata.all
+      @design = @items[0].path.split(".")[0].split("/")[-1]
+      
+      pp @items
+      redirect "/#{@design}/", 301 # find correct HTTP response code
     end
 
     get '/:name/' do 
