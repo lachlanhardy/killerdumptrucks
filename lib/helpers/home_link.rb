@@ -1,7 +1,7 @@
 module Killerdumptrucks
   module Helpers
     def home_link(text)
-      (@category == "home" ? '<span>' + text + '</span>' : '<a href="/" rel="home">' + text + '</a>')
+      (@category == "about" ? '<span>' + text + '</span>' : '<a href="/about/">' + text + '</a>')
     end
   end
 end
