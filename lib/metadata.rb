@@ -34,9 +34,8 @@ class Metadata
     @template = file_contents
   end
   def slug
-    File.basename(File.join("#{self.path.split("/")[-3]}/#{self.path.split("/")[-2]}"))
+    File.basename(path_without_extension)
   end
-  alias :dom_id :slug
   def title
     template_variable("title")
   end
