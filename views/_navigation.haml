@@ -1,10 +1,6 @@
 %nav
   %ul
-    - @nav_items.each do |item|
-      %li
-        - if item == request.env['PATH_INFO'].split("/").last
-          %span= item
-        - else
-          %a{:href => "/#{item}/"}= item
-        
-        
+    %li= link_or_span_if_current_path "About", "/about/"
+    %li= link_or_span_if_current_path "Browse", "/browse/"
+    %li
+      %a{:href => @design ? "/something-different-from/#{@design.slug}/" : "/random/"} Random

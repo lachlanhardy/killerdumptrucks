@@ -58,7 +58,7 @@ class Metadata
     [other.published.year, other.published.month, other.title] <=> [self.published.year, self.published.month, self.title]
   end
   def ==(other)
-    other.respond_to?(:slug) && self.slug == other.slug
+    other.respond_to?(:path) && self.path == other.path
   end
   def path_without_extension
     self.path.sub(".haml", "")

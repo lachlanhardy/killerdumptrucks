@@ -8,6 +8,8 @@ require 'pp' # only for dev work
 
 load "#{File.dirname(__FILE__)}/lib/metadata.rb"
 
+Metadata.path = "#{File.dirname(__FILE__)}/views/designs"
+
 set :haml, {:format => :html5, :attr_wrapper => '"'}
 
 Dir.glob("lib/helpers/*").each do |helper|
@@ -32,9 +34,8 @@ end
 
 # homepage
 get '/' do
-  @items = Metadata.all.sort_by {|item| item.published}.reverse
-  @design = @items[0].path.split(".")[0].split("/")[-1]
-  redirect "/#{@design}/", 302
+  last_item = Metadata.all.sort_by {|item| item.published}.last
+  redirect "/#{last_item.slug}/", 302
 end
 
 get '/feed/' do 
@@ -47,19 +48,24 @@ get '/about/' do
   haml :about
 end
 
-get '/random/' do 
-  items = Metadata.all
-  random_item = items[rand(Metadata.all.length)]
-  redirect "/#{random_item.slug}/", 302
+get '/random/' do
+  designs = Metadata.all
+  random = designs[rand(designs.length)]
+  redirect "/#{random.slug}/", 302
+end
+
+get '/something-different-from/*/' do |different_from_slug|
+  other_designs = Metadata.all.reject {|m| m.slug == different_from_slug}
+  random = other_designs[rand(other_designs.length)]
+  redirect "/#{random.slug}/", 302
 end
 
 get '/browse/' do 
   @items = Metadata.all.sort_by {|item| item.published}.reverse
-  @design = @items[0].path.split(".")[0].split("/")[-1]
   haml :browse
 end
 
-get '/:name/' do 
-  @design = params[:name]
-  haml :"/designs/#{@design}"
+get '/*/' do |name|
+  @design = Metadata[name]
+  haml :"/designs/#{@design.slug}"
 end
