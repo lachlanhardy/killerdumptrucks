@@ -53,6 +53,7 @@ module Killerdumptrucks
       @items = Metadata.all
       @design = @items[rand(Metadata.all.length)].path.split(".")[0].split("/")[-1]
       redirect "/#{@design}/", 302
+    end
     
     get '/browse/' do 
       @items = Metadata.all.sort_by {|item| item.published}.reverse
