@@ -1,6 +1,0 @@
-%nav
-  %ul
-    %li= link_or_span_if_current_path "About", "/about/"
-    / Temporary out:  %li= link_or_span_if_current_path "Browse", "/browse/"
-    %li
-      %a{:href => @design ? "/something-different-from/#{@design.slug}/" : "/random/"} Random
