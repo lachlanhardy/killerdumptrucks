@@ -5,8 +5,11 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+# postgres is fun
 gem 'pg'
 
+# so is thin
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
