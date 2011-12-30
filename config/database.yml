@@ -17,8 +17,8 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: killerdumptrucks-test
+  database: killerdumptruckstest
   pool: 5
-  username: killerdumptrucks-test
+  username: killerdumptruckstest
   password:
 
